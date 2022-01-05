@@ -19,7 +19,7 @@ foreach ($dbh->query('SELECT * from actor LIMIT 20') as $row) {
             <td>' . $row["last_name"] . '</td>
             <td><form method="post" action="supp.php"><input type="hidden" name="id" value="' . $row['actor_id'] . '" />
             <input type="form" name="nom"/ required>
-            <button type="submit" class="btn bg-primary"><i class="fas fa-plus-circle"></i> Supprimer</button></form></td>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-plus-circle"></i>Modifier</button></form></td>
             </tr>';
 }
 $dbh = null;

@@ -13,5 +13,5 @@ try {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();
 }
-header("Refresh: 3;url=index.php");
+header("Refresh: 1;url=index.php");
 ?>
