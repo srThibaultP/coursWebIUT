@@ -2,7 +2,7 @@
   @Author: Thibault PECH
   @Date:   2022-02-02 08:28:37
   @Last Modified by:   Thibault PECH
-  @Last Modified time: 2022-02-02 09:17:57
+  @Last Modified time: 2022-02-02 11:31:23
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,20 +13,33 @@
 </head>
 
 <body>
+    <p>Timer :</p>
+    <div id="timer">
+        00:00:00
+    </div>
+    <p>Clicks :</p>
+    <div id="clicks">
+        0
+    </div>
+    <p>Nombre de paires :</p>
+    <div id="paires">
+        0
+    </div>
     <table id="memory">
         <tr>
-            <td><img src="img/Point_d_interrogation.jpg"/></td>
-            <td><img src="img/Point_d_interrogation.jpg"/></td>
-            <td><img src="img/Point_d_interrogation.jpg"/></td>
-            <td><img src="img/Point_d_interrogation.jpg"/></td>
+            <td><img src="img/Point_d_interrogation.jpg" /></td>
+            <td><img src="img/Point_d_interrogation.jpg" /></td>
+            <td><img src="img/Point_d_interrogation.jpg" /></td>
+            <td><img src="img/Point_d_interrogation.jpg" /></td>
         </tr>
         <tr>
-            <td><img src="img/Point_d_interrogation.jpg"/></td>
-            <td><img src="img/Point_d_interrogation.jpg"/></td>
-            <td><img src="img/Point_d_interrogation.jpg"/></td>
-            <td><img src="img/Point_d_interrogation.jpg"/></td>
+            <td><img src="img/Point_d_interrogation.jpg" /></td>
+            <td><img src="img/Point_d_interrogation.jpg" /></td>
+            <td><img src="img/Point_d_interrogation.jpg" /></td>
+            <td><img src="img/Point_d_interrogation.jpg" /></td>
         </tr>
     </table>
+    <button id="btn" onclick="rejouer(this.numCarte);">Rejouer</button>
     <script src="memory.js"></script>
 </body>
 

@@ -2,9 +2,13 @@
  * @Author: Thibault PECH
  * @Date:   2022-02-02 08:45:03
  * @Last Modified by:   Thibault PECH
- * @Last Modified time: 2022-02-02 10:09:53
+ * @Last Modified time: 2022-02-02 10:29:23
  */
-.img{
-    max-width: 100px;
-    height: auto;
+img{
+    height: 200px;
+    width: 200px;
+}
+
+button{
+    display: none;
 }
