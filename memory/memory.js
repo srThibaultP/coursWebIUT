@@ -2,15 +2,15 @@
  * @Author: Thibault PECH
  * @Date:   2022-02-02 08:52:59
  * @Last Modified by:   Thibault PECH
- * @Last Modified time: 2022-02-02 11:32:41
+ * @Last Modified time: 2022-02-02 11:50:55
  */
 var numCartes = [1, 1, 2, 2, 3, 3, 4, 4];
 var etatsCartes = [0, 0, 0, 0, 0, 0, 0, 0];
 var cartesTrouve = []; // Etat de la carte
 var nbPaires = 0;
-var clicks = 0;
-var nbReset = 0;
-
+var clicks = localStorage.getItem('clicks');
+var nbReset = localStorage.getItem('reset');
+var localStorage = window.localStorage;
 
 var date = new Date;
 var connection = date.getTime();
@@ -31,7 +31,9 @@ for (var i = 0; i < selectionCarte.length; i++) {
     }
 }
 
-//shuffle();  // L'array numCartes à changé de position
+shuffle();  // L'array numCartes à changé de position
+document.getElementById('clicks').innerHTML = clicks;
+document.getElementById('reset').innerHTML = nbReset;
 //----------------------------------------------------------------------------------------------------------------------
 // Permet de mélanger les cartes
 function shuffle() {
@@ -108,6 +110,8 @@ function enJeu(numCarte) {
 }
 
 function rejouer() {
+    nbReset++;
+    document.getElementById('reset').innerHTML = nbReset;
     shuffle();
     for (var i = 0; i < selectionCarte.length; i++) {
         selectionCarte[i].src = "img/Point_d_interrogation.jpg";
@@ -116,6 +120,8 @@ function rejouer() {
     etatsCartes = [0, 0, 0, 0, 0, 0, 0, 0];
     nbPaires = 0;
     resetTimer();
+    localStorage.setItem('clicks', clicks);
+    localStorage.setItem('reset', nbReset);
 }
 
 function departTimer() {
