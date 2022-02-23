@@ -1,10 +1,10 @@
-<script src="ajax.js"></script>
+<script src="ajax1.js"></script>
 <?php
 require 'cnxdb.php';
 
-echo "<label>Sélectionner un acteur </label><select>";
+echo '<label>Sélectionner un acteur </label><select id="actorid">';
 foreach ($dbh->query('SELECT * from actor') as $row) {
-  echo '    <option value="' . $row["actor_id"] . '>' . $row["first_name"] . ' ' . $row["last_name"] . '</option>';
+  echo '    <option value="' . $row["actor_id"] .'">' . $row["first_name"] . ' ' . $row["last_name"] . '</option>';
 }
 $dbh = null;
 echo '</select><button type="button" onClick="loadXMLDoc()">Afficher les films</button><div id="films"></div>';
