@@ -18,20 +18,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('tickets/liste', [TicketsController::class, 'show']);
+Route::get('tickets', [TicketsController::class, 'show']);
 
 Route::get('tickets/create', function () {
     return view('tickets/create');
 });
 
+Route::post('tickets/create', [TicketsController::class, 'create']);
 
-Auth::routes();
+Route::get('tickets/liste', [TicketsController::class, 'show']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('tickets/modify', [TicketsController::class, 'edit']);
 
-Auth::routes();
+Route::post('tickets/modify', [TicketsController::class, 'edit']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('tickets/updating', [TicketsController::class, 'update']);
 
 Auth::routes();
 
