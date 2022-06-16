@@ -1,5 +1,6 @@
 @if ($infos == null)
     <h1>Vous n'avez pas de tickets, souhaitez-vous en créer un ?</h1>
+    <a href="http://127.0.0.1:8000/tickets/create">Créer un ticket</a>
 @else
 <h1>Tickets de {{ $infos[0]->name }} :</h1>
 <table>

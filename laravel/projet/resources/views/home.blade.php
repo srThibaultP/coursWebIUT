@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <a href="http://127.0.0.1:8000/tickets">Accès aux tickets</a>
                 </div>
             </div>
         </div>
